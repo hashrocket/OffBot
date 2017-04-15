@@ -15,8 +15,8 @@ RSpec.describe OffBot::MessageBuilder do
 
       expect(message).to eq(<<~MESSAGE.strip)
       test:
-      2017-01-01: New Year's Day
-      2017-01-16: Martin Luther King, Jr. Day
+      Sunday, 01 Jan 2017: New Year's Day
+      Monday, 16 Jan 2017: Martin Luther King, Jr. Day
       MESSAGE
     end
   end

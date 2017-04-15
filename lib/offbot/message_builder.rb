@@ -12,7 +12,8 @@ module OffBot
       empty_text: NO_HOLIDAYS_FOUND
     )
       holidays = off_days_calc.days_off(from_date, to_date).map do |holiday|
-        "#{holiday[:date]}: #{holiday[:name]}"
+        formatted_date = holiday[:date].strftime('%A, %d %b %Y')
+        "#{formatted_date}: #{holiday[:name]}"
       end.join("\n")
 
       if holidays.size.positive?
