@@ -1,0 +1,3 @@
+.env
+vendor/
+spec/examples.txt
