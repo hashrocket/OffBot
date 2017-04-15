@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'spec_helper'
 
 RSpec.describe OffBot::OffDays do
@@ -5,7 +6,7 @@ RSpec.describe OffBot::OffDays do
     it 'returns Hashrocket Holidays' do
       from_date = Date.new(2016, 12, 29)
       to_date   = Date.new(2017, 12, 29)
-      holidays  = described_class.new.hashrocket_holidays(from_date, to_date)
+      holidays  = described_class.new.days_off(from_date, to_date)
       expected  = [
         {
           date: Date.new(2016, 12, 31),

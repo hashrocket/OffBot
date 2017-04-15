@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'holidays'
 
 module OffBot
@@ -22,7 +23,7 @@ module OffBot
       Holidays.load_custom(File.expand_path('./custom_holidays.yaml'))
     end
 
-    def hashrocket_holidays(from_date, to_date)
+    def days_off(from_date, to_date)
       Holidays
         .between(from_date, to_date, [:us, :informal])
         .select { |holiday| HASHROCKET_HOLIDAYS.include?(holiday[:name]) }
