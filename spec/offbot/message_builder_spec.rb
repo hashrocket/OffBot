@@ -7,7 +7,7 @@ RSpec.describe OffBot::MessageBuilder do
     it 'returns message contaning all holidays for January' do
       from_date = Date.new(2017, 1, 1)
       to_date   = Date.new(2017, 1, 31)
-      message   = described_class.message(
+      message   = described_class.build_message(
         message_start: 'test',
         from_date: from_date,
         to_date: to_date

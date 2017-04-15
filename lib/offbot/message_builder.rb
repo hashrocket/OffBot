@@ -5,7 +5,12 @@ module OffBot
     DEFAULT_MSG_START = 'Holidays this week and next week'
     NO_HOLIDAYS_FOUND = 'No holidays found for this week or next week 😔'
 
-    def self.message(message_start: DEFAULT_MSG_START, from_date:, to_date:, empty_text: NO_HOLIDAYS_FOUND)
+    def self.build_message(
+      message_start: DEFAULT_MSG_START,
+      from_date:,
+      to_date:,
+      empty_text: NO_HOLIDAYS_FOUND
+    )
       holidays = off_days_calc.days_off(from_date, to_date).map do |holiday|
         "#{holiday[:date]}: #{holiday[:name]}"
       end.join("\n")
