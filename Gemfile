@@ -8,6 +8,7 @@ gem 'holidays'
 gem 'pry'
 gem 'pry-byebug'
 gem 'slack-ruby-bot'
+gem 'whenever', require: false
 
 group :test do
   gem 'rspec'
