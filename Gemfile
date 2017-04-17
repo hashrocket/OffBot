@@ -15,8 +15,8 @@ gem 'slack-ruby-bot'
 gem 'whenever', require: false
 
 group :test do
+  gem 'rack-test'
   gem 'rspec'
   gem 'vcr'
   gem 'webmock'
-  gem 'rack-test'
 end
