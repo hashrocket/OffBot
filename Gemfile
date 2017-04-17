@@ -10,6 +10,7 @@ gem 'holidays'
 gem 'pry'
 gem 'pry-byebug'
 gem 'puma'
+gem 'rake'
 gem 'sinatra'
 gem 'slack-ruby-bot'
 gem 'whenever', require: false
