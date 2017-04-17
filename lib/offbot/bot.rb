@@ -2,7 +2,7 @@
 module OffBot
   # actual bot - allows asking for upcoming off days
   class Bot < SlackRubyBot::Bot
-    match(/upcoming holidays|vacation|time off|holidays/) do |client, data|
+    match(/(upcoming holidays|vacation|time off).*\?$/) do |client, data|
       message = MessageBuilder.build_message(
         message_start: 'There are some holidays coming up :sharkdance:, please let your client know today',
         from_date: Date.today,
