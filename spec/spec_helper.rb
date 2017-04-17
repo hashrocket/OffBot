@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'slack-ruby-bot/rspec'
 require_relative '../lib/offbot'
 
 RSpec.configure do |config|
