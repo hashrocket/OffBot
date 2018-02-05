@@ -7,8 +7,6 @@ module OffBot
     HASHROCKET_HOLIDAYS = [
       'New Year\'s Eve', # in custom_holidays.yaml
       'New Year\'s Day',
-      'Martin Luther King, Jr. Day',
-      'Presidents\' Day',
       'Good Friday',
       'Memorial Day',
       'Independence Day',
