@@ -19,16 +19,6 @@ RSpec.describe OffBot::OffDays do
           regions: [:us]
         },
         {
-          date: Date.new(2017, 1, 16),
-          name: 'Martin Luther King, Jr. Day',
-          regions: [:us]
-        },
-        {
-          date: Date.new(2017, 2, 20),
-          name: "Presidents' Day",
-          regions: [:us]
-        },
-        {
           date: Date.new(2017, 4, 14),
           name: 'Good Friday',
           regions: [:us]
