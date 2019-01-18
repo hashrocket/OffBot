@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module OffBot
   # builds messages based on OffDays and date range
   class MessageBuilder
@@ -7,8 +8,8 @@ module OffBot
 
     def self.build_message(
       message_start: DEFAULT_MSG_START,
-      from_date:,
-      to_date:,
+      from_date: Date.today,
+      to_date: 2.weeks.from_now,
       empty_text: NO_HOLIDAYS_FOUND
     )
       holidays = off_days_calc.days_off(from_date, to_date).map do |holiday|
