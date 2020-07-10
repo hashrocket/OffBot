@@ -19,11 +19,6 @@ RSpec.describe OffBot::OffDays do
           regions: [:us]
         },
         {
-          date: Date.new(2017, 4, 14),
-          name: 'Good Friday',
-          regions: [:us]
-        },
-        {
           date: Date.new(2017, 5, 29),
           name: 'Memorial Day',
           regions: [:us]
