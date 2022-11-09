@@ -5,6 +5,5 @@ require 'lib/offbot'
 
 desc 'Announce upcoming holidays'
 task :announce do
-  return unless Date.today.monday?
-  OffBot::Announcer.announce
+  OffBot::Announcer.announce #if Date.today.monday?
 end
