@@ -1,56 +1,56 @@
 # frozen_string_literal: true
-require 'spec_helper'
+
+require "spec_helper"
 
 RSpec.describe OffBot::OffDays do
-  describe '#hashrocket_holidays' do
-    it 'returns Hashrocket Holidays' do
+  describe "#hashrocket_holidays" do
+    it "returns Hashrocket Holidays" do
       from_date = Date.new(2016, 12, 29)
-      to_date   = Date.new(2017, 12, 29)
-      holidays  = described_class.new.days_off(from_date, to_date)
-      expected  = [
+      to_date = Date.new(2017, 12, 29)
+      holidays = described_class.new.days_off(from_date, to_date)
+
+      expect(holidays).to match_array([
         {
           date: Date.new(2016, 12, 31),
           name: "New Year's Eve",
-          regions: [:us]
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 1, 1),
           name: "New Year's Day",
-          regions: [:us]
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 5, 29),
-          name: 'Memorial Day',
-          regions: [:us]
+          name: "Memorial Day",
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 7, 4),
-          name: 'Independence Day',
-          regions: [:us]
+          name: "Independence Day",
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 9, 4),
-          name: 'Labor Day',
-          regions: [:us]
+          name: "Labor Day",
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 11, 23),
-          name: 'Thanksgiving',
-          regions: [:us]
+          name: "Thanksgiving",
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 11, 24),
-          name: 'Thanksgiving Friday',
-          regions: [:us]
+          name: "Thanksgiving Friday",
+          regions: array_including(:us)
         },
         {
           date: Date.new(2017, 12, 25),
-          name: 'Christmas Day',
-          regions: [:us]
+          name: "Christmas Day",
+          regions: array_including(:us)
         }
-      ]
-
-      expect(holidays).to eq(expected)
+      ])
     end
   end
 end

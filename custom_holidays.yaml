@@ -2,22 +2,29 @@ months:
   11:
   - name: Thanksgiving Friday
     function: day_after_thanksgiving(year)
-    informal: true
+    type: :informal
     regions: [us]
   12:
   - name: New Year's Eve
     regions: [us]
-    mday: -1
-    informal: true
+    mday: 31
+    type: :informal
     observed: to_weekday_if_weekend(date)
+
 methods:
   day_after_thanksgiving:
     arguments: year
-    source: |
+    ruby: |
       Holidays::Factory::DateCalculator.day_of_month_calculator.call(year, 11, 4, 4) + 1
-tests: |
-    {Date.civil(2007,12,31) => 'New Year\'s Eve',
-     Date.civil(2013,11,28) => 'Thanksgiving Friday'}.each do |date, name|
-      assert_equal name, (Holidays.on(date, :us)[0] || {})[:name]
-    end
 
+tests:
+  - given:
+      date: ['2017-12-31']
+      regions: ["us"]
+    expect:
+      name: "New Year's Eve"
+  - given:
+      date: ['2017-11-24']
+      regions: ["us"]
+    expect:
+      name: "Thanksgiving Friday"
