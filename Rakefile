@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'lib/offbot'
+require "lib/offbot"
 
-desc 'Announce upcoming holidays'
+desc "Announce upcoming holidays"
 task :announce do
-  OffBot::Announcer.announce #if Date.today.monday?
+  OffBot::Announcer.announce if Date.today.monday?
 end
