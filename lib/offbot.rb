@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'dotenv'
-require 'slack-ruby-bot'
+require 'slack-ruby-client'
 
 require_relative './offbot/off_days'
 require_relative './offbot/message_builder'

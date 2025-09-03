@@ -6,13 +6,13 @@ gem 'activesupport'
 gem 'celluloid-io'
 gem 'dotenv'
 gem 'foreman'
-gem 'holidays'
+gem 'holidays', '~> 5.4.0'
 gem 'pry'
 gem 'pry-byebug'
 gem 'puma'
 gem 'rake'
 gem 'sinatra'
-gem 'slack-ruby-bot'
+gem 'slack-ruby-client'
 gem 'whenever', require: false
 
 group :test do

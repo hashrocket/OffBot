@@ -1,121 +1,125 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.4.3)
+    activesupport (7.1.5.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
-    byebug (9.0.6)
-    celluloid (0.17.3)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      mutex_m
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.3.0)
+    benchmark (0.4.1)
+    bigdecimal (3.2.2)
+    byebug (11.1.3)
+    celluloid (0.18.0)
+      timers (~> 4)
     celluloid-io (0.17.3)
       celluloid (>= 0.17.2)
       nio4r (>= 1.1)
       timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.6)
-      timers (>= 4.1.1)
     chronic (0.10.2)
-    coderay (1.1.1)
-    concurrent-ruby (1.1.6)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
-    diff-lcs (1.3)
-    dotenv (2.2.0)
-    faraday (0.12.0.1)
-      multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.11.0.1)
-      faraday (>= 0.7.4, < 1.0)
-    foreman (0.84.0)
-      thor (~> 0.19.1)
-    gli (2.16.0)
-    hashdiff (0.3.2)
-    hashie (3.5.5)
-    hitimes (1.2.4)
-    holidays (5.4.0)
-    i18n (1.8.2)
-      concurrent-ruby (~> 1.0)
-    json (2.0.4)
-    method_source (0.8.2)
-    minitest (5.14.1)
-    multipart-post (2.0.0)
-    nio4r (2.0.0)
-    pry (0.10.4)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    pry-byebug (3.4.2)
-      byebug (~> 9.0)
-      pry (~> 0.10)
-    public_suffix (2.0.5)
-    puma (3.12.6)
-    rack (1.6.13)
-    rack-protection (1.5.5)
-      rack
-    rack-test (0.6.3)
-      rack (>= 1.0)
-    rake (12.3.3)
-    rspec (3.5.0)
-      rspec-core (~> 3.5.0)
-      rspec-expectations (~> 3.5.0)
-      rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.4)
-      rspec-support (~> 3.5.0)
-    rspec-expectations (3.5.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-mocks (3.5.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-support (3.5.0)
-    safe_yaml (1.0.4)
-    sinatra (1.4.8)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    slack-ruby-bot (0.10.1)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.4)
+    crack (1.0.0)
+      bigdecimal
+      rexml
+    diff-lcs (1.6.2)
+    dotenv (2.8.1)
+    drb (2.2.3)
+    faraday (2.8.1)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-mashify (1.0.0)
+      faraday (~> 2.0)
       hashie
-      slack-ruby-client (>= 0.6.0)
-    slack-ruby-client (0.8.0)
-      activesupport
-      faraday (>= 0.9)
-      faraday_middleware
+    faraday-multipart (1.1.1)
+      multipart-post (~> 2.0)
+    faraday-net_http (3.0.2)
+    foreman (0.90.0)
+      thor (~> 1.4)
+    gli (2.22.2)
+      ostruct
+    hashdiff (1.2.0)
+    hashie (5.0.0)
+    holidays (5.4.0)
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
+    logger (1.7.0)
+    method_source (1.1.0)
+    minitest (5.25.5)
+    multipart-post (2.4.1)
+    mustermann (3.0.4)
+      ruby2_keywords (~> 0.0.1)
+    mutex_m (0.3.0)
+    nio4r (2.7.4)
+    ostruct (0.6.3)
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.8.0)
+      byebug (~> 11.0)
+      pry (~> 0.10)
+    public_suffix (5.1.1)
+    puma (6.6.1)
+      nio4r (~> 2.0)
+    rack (2.2.17)
+    rack-protection (3.2.0)
+      base64 (>= 0.1.0)
+      rack (~> 2.2, >= 2.2.4)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rake (13.3.0)
+    rexml (3.4.2)
+    rspec (3.13.1)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.5)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.5)
+    ruby2_keywords (0.0.5)
+    securerandom (0.3.2)
+    sinatra (3.2.0)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.2.0)
+      tilt (~> 2.0)
+    slack-ruby-client (2.7.0)
+      faraday (>= 2.0.1)
+      faraday-mashify
+      faraday-multipart
       gli
       hashie
-      json
-      websocket-driver
-    slop (3.6.0)
-    thor (0.19.4)
-    thread_safe (0.3.6)
-    tilt (2.0.7)
-    timers (4.1.2)
-      hitimes
-    tzinfo (1.2.7)
-      thread_safe (~> 0.1)
-    vcr (3.0.3)
-    webmock (3.0.1)
-      addressable (>= 2.3.6)
+      logger
+    thor (1.4.0)
+    tilt (2.6.1)
+    timers (4.3.5)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    vcr (6.3.1)
+      base64
+    webmock (3.25.1)
+      addressable (>= 2.8.0)
       crack (>= 0.3.2)
-      hashdiff
-    websocket-driver (0.6.5)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.5)
-    whenever (0.9.7)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    whenever (1.0.0)
       chronic (>= 0.6.3)
 
 PLATFORMS
@@ -126,7 +130,7 @@ DEPENDENCIES
   celluloid-io
   dotenv
   foreman
-  holidays
+  holidays (~> 5.4.0)
   pry
   pry-byebug
   puma
@@ -134,7 +138,7 @@ DEPENDENCIES
   rake
   rspec
   sinatra
-  slack-ruby-bot
+  slack-ruby-client
   vcr
   webmock
   whenever
@@ -143,4 +147,4 @@ RUBY VERSION
    ruby 2.7.6p219
 
 BUNDLED WITH
-   1.17.3
+   2.1.4
