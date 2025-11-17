@@ -6,8 +6,8 @@ require "active_support/core_ext/integer"
 module OffBot
   # server for automatic reminders of upcoming off days
   class Announcer
-    def self.announce(channel: '#general', message: nil)
-      message = default_message unless message
+    def self.announce(channel: "#general", message: nil)
+      message ||= default_message
 
       return if message.empty?
 
@@ -20,7 +20,7 @@ module OffBot
     def self.default_message
       message_builder.build_message(
         message_start: <<~EOF.strip,
-        <@here> Happy Monday! here is the holiday schedule for this week and next week
+          <!here> Happy Monday! here is the holiday schedule for this week and next week
         EOF
         from_date: Date.today,
         to_date: 2.weeks.from_now
