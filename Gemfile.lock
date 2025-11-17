@@ -64,7 +64,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     net-http (0.6.0)
       uri
-    nio4r (2.7.4)
+    nio4r (2.7.5)
     ostruct (0.6.3)
     pry (0.15.2)
       coderay (~> 1.1)
@@ -73,7 +73,7 @@ GEM
       byebug (~> 12.0)
       pry (>= 0.13, < 0.16)
     public_suffix (6.0.2)
-    puma (7.0.0)
+    puma (7.1.0)
       nio4r (~> 2.0)
     rack (3.2.1)
     rack-protection (4.1.1)
