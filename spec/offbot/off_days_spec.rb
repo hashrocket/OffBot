@@ -46,10 +46,24 @@ RSpec.describe OffBot::OffDays do
           regions: array_including(:us)
         },
         {
+          date: Date.new(2017, 12, 24),
+          name: "Christmas Eve",
+          regions: array_including(:us)
+        },
+        {
           date: Date.new(2017, 12, 25),
           name: "Christmas Day",
           regions: array_including(:us)
         }
+      ])
+    end
+
+    it "returns Christmas Eve, which the holidays gem does not define" do
+      holidays = described_class.new.days_off(Date.new(2026, 12, 21), Date.new(2026, 12, 27))
+
+      expect(holidays.map { |holiday| [holiday[:date], holiday[:name]] }).to eq([
+        [Date.new(2026, 12, 24), "Christmas Eve"],
+        [Date.new(2026, 12, 25), "Christmas Day"]
       ])
     end
   end

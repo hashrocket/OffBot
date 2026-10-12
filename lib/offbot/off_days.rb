@@ -13,7 +13,7 @@ module OffBot
       "Labor Day",
       "Thanksgiving",
       "Thanksgiving Friday", # in custom_holidays.yaml
-      "Christmas Eve",
+      "Christmas Eve", # in custom_holidays.yaml
       "Christmas Day"
     ].freeze
 
