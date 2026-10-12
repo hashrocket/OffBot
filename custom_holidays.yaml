@@ -5,6 +5,10 @@ months:
     type: :informal
     regions: [us]
   12:
+  - name: Christmas Eve
+    regions: [us]
+    mday: 24
+    type: :informal
   - name: New Year's Eve
     regions: [us]
     mday: 31
@@ -23,6 +27,11 @@ tests:
       regions: ["us"]
     expect:
       name: "New Year's Eve"
+  - given:
+      date: ['2017-12-24']
+      regions: ["us"]
+    expect:
+      name: "Christmas Eve"
   - given:
       date: ['2017-11-24']
       regions: ["us"]
